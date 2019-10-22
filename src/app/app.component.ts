@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsoleOutputService } from './console-output.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fizzbuzz';
+
+  constructor(private outputService: ConsoleOutputService) {
+    this.outputService.fizzBuzzKata();
+  }
 }
